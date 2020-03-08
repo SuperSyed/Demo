@@ -65,7 +65,7 @@ public class registerPatientStep {
         registerPatient.country.sendKeys(faker.address().country());
         registerPatient.postalCode.sendKeys(faker.address().zipCode());
         registerPatient.phoneNum.click();
-        registerPatient.phoneNumber.sendKeys(faker.phoneNumber().cellPhone());
+        registerPatient.phoneNumber.sendKeys("301-987-3456");
         registerPatient.relatives.click();
 
     }
