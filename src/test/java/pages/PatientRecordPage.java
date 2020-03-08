@@ -25,6 +25,24 @@ public class PatientRecordPage {
     public WebElement patientName;
     @FindBy (xpath =  "//h3[contains(text(),'General Actions')]")
     public WebElement generalAction;
+    @FindBy(id = "org.openmrs.module.coreapps.createVisit")
+    public WebElement startVisit;
+    @FindBy(id = "org.openmrs.module.coreapps.createRetrospectiveVisit")
+    public WebElement addPastVisit;
+    @FindBy(id = "org.openmrs.module.coreapps.mergeVisits")
+    public WebElement mergeVisits;
+    @FindBy(id = "chartsearch.chartSearchLink")
+    public WebElement chartSearch;
+    @FindBy(id = "appointmentschedulingui.schedulingAppointmentDashboardLink")
+    public WebElement scheduleAppointment;
+    @FindBy(id = "appointmentschedulingui.requestAppointmentDashboardLink")
+    public WebElement requestAppointment;
+    @FindBy(id = "org.openmrs.module.coreapps.markPatientDead")
+    public WebElement markPatientDeceased;
+    @FindBy(id = "org.openmrs.module.coreapps.deletePatient")
+    public WebElement deletePatient1;
+
+
     @FindBy (id = "org.openmrs.module.coreapps.deletePatient")
     public WebElement deletePatient;
     @FindBy (id = "delete-reason")

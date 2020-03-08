@@ -3,13 +3,18 @@ package step_definitions;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import org.junit.Before;
 import org.openqa.selenium.Keys;
 import pages.registerPatientPage;
 import utilities.ConfigurationReader;
+import utilities.Driver;
+
+import java.util.concurrent.TimeUnit;
 
 public class registerPatientStep {
 
     Faker faker = new Faker();
+
     registerPatientPage registerPatient = new registerPatientPage();
     @Then("User clicks register a patient")
     public void user_clicks_register_a_patient() {
@@ -17,15 +22,20 @@ public class registerPatientStep {
     }
 
     @And("User enters Given name")
-    public void userEntersGivenName() {
+    public void userEntersGivenName() throws InterruptedException {
         String gName = ConfigurationReader.getProperty("givenName");
-        registerPatient.givenName.sendKeys(gName);
+        registerPatient.givenName.sendKeys(faker.name().firstName());
+        Thread.sleep(1000);
+        //registerPatient.givenName.sendKeys(gName);
 
     }
     @And("User enters Family name")
     public void userEntersFamilyName() throws InterruptedException {
         String famName = ConfigurationReader.getProperty("familyName");
-        registerPatient.familyName.sendKeys(famName);
+       Thread.sleep(1000);
+        registerPatient.familyName.sendKeys(faker.name().lastName());
+      //registerPatient.familyName.sendKeys(famName);
+
         Thread.sleep(2000);
         registerPatient.familyName.sendKeys(Keys.ENTER);
         registerPatient.familyName.sendKeys(Keys.ENTER);
@@ -41,7 +51,7 @@ public class registerPatientStep {
 
     @Then("User enters Birthdate information")
     public void userEntersBirthdateInformation() {
-        registerPatient.birthdateYears.sendKeys("18");
+        registerPatient.birthdateYears.sendKeys("30");
         registerPatient.birthdateMonths.sendKeys("11");
         registerPatient.address.click();
 
@@ -76,7 +86,7 @@ public class registerPatientStep {
     @Then("User clicks {string} to register as female")
     public void userClicksToRegisterAsFemale(String arg0) throws InterruptedException {
         registerPatient.clickFemale.click();
-        Thread.sleep(2000);
+       Thread.sleep(2000);
         registerPatient.birthDate.click();
     }
 }

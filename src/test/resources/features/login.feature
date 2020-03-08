@@ -1,4 +1,4 @@
-@Regression
+
 Feature: Login
  @Smoke
   Scenario: As an advisor I should be able to successfully login to Imposta

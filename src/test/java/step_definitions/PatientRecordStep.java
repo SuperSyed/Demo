@@ -43,9 +43,24 @@ public class PatientRecordStep {
 
     @Then("User lands on patient dashboard")
     public void userLandsOnPatientDashboard() {
-        patientRecord.generalAction.getText();
+        Assert.assertEquals(patientRecord.generalAction.getText(),"General Actions");
+        Assert.assertEquals(patientRecord.startVisit.getText(), "Start Visit");
+        Assert.assertEquals(patientRecord.addPastVisit.getText(),"Add Past Visit");
+        Assert.assertEquals(patientRecord.mergeVisits.getText(),"Merge Visits");
+        Assert.assertEquals(patientRecord.chartSearch.getText(),"Chart Search");
+        Assert.assertEquals(patientRecord.scheduleAppointment.getText(),"Schedule Appointment");
+        Assert.assertEquals(patientRecord.requestAppointment.getText(),"Request Appointment");
+        Assert.assertEquals(patientRecord.markPatientDeceased.getText(),"Mark Patient Deceased");
+        Assert.assertEquals(patientRecord.deletePatient1.getText(),"Delete Patient");
         System.out.println(patientRecord.generalAction.getText());
-
+        System.out.println(patientRecord.startVisit.getText());
+        System.out.println(patientRecord.addPastVisit.getText());
+        System.out.println(patientRecord.mergeVisits.getText());
+        System.out.println(patientRecord.chartSearch.getText());
+        System.out.println(patientRecord.scheduleAppointment.getText());
+        System.out.println(patientRecord.requestAppointment.getText());
+        System.out.println(patientRecord.markPatientDeceased.getText());
+        System.out.println(patientRecord.deletePatient1.getText());
     }
 
     @And("User can delete patient")
