@@ -93,9 +93,9 @@ public class APHomeStep {
     }
     @Then("I should be able to upload a file")
     public void iShouldBeAbleToUploadAFile() throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         Driver.getDriver().switchTo().frame(0);
-        aPHomePage.uploadButton2.sendKeys("C:\\Users\\Syed\\Desktop\\YFramework\\src\\test\\resources\\testData\\BiggestTroll.txt");
+        aPHomePage.uploadButton2.sendKeys("C:\\Users\\Syed\\Desktop\\DownloadedSelenium\\YFramework\\src\\test\\resources\\testData");
         // aPHomePage.uploadButton2.sendKeys("../src/test/resources/testData/BiggestTroll.txt");
         Driver.getDriver().switchTo().defaultContent();
     }

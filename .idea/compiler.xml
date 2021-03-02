@@ -7,9 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="YFramework" />
-        <module name="zk" />
-        <module name="NFTDB" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="YFramework" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

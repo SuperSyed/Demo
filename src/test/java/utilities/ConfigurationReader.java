@@ -10,6 +10,7 @@ public class ConfigurationReader {
     static {
         try {
             String path = "configuration.properties";
+            String autoPath = "autoTraderConfig.properties";
 
             FileInputStream stream = new FileInputStream(path);
 

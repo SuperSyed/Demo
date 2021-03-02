@@ -1,4 +1,6 @@
+@regression
 Feature: Search patient record functionality
+
 
   @find-patient-record
   Scenario: User should be able to search by patient's name

@@ -19,7 +19,7 @@ public class OhrmEmployeesPage {
     public WebElement loginBtn;
     @FindBy(id = "menu_pim_viewPimModule")
     public WebElement pImTab;
-    @FindBy(id = "menu_pim_viewEmployeeList")
+    @FindBy(xpath = "//b[contains(text(),'PIM')]")
     public WebElement employeeTab;
     @FindBy(xpath = "//table[@id='resultTable']/tbody/tr")
     public List<WebElement> employeeRecords;

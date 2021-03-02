@@ -1,6 +1,6 @@
 Feature: OpenMrs Login Functionality
 
-  @OM-login
+    @OM-login
   Scenario: User should be able to login to OpenMrs website
     Given User navigate to OpenMrs login page
     Then User enters username
